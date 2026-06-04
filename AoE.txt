@@ -1,0 +1,64 @@
+1. fork()
+used to create a child process with separate memory space
+fork() returns 0 on child process
+		PID of child to parent
+		-1 to parent if fork fails
+
+
+2. Signal handling in C allows a program to intercept and respond to software interrupts 
+
+	SIGINT	Interrupt from keyboard (Ctrl+C)
+	SIGSEGV	Segmentation fault
+	SIGTERM	Termination request
+	SIGKILL	Force kill
+	SIGALRM	Alarm signal
+
+3.Different kernel crashes
+
+i] Kernel Oops
+
+	A Kernel Oops occurs when the kernel encounters an unexpected error but can continue 	running.
+
+Null pointer dereference
+Invalid memory access
+Driver bug
+
+ii] Kernel Panic
+	A Kernel Panic is a safety mechanism triggered when the kernel encounters an internal 	fatal error from which it cannot safely recover.
+
+iii] Kernel Hang
+
+	A Kernel Hang is when the kernel becomes stuck and stops making progress.
+
+Causes:
+
+Deadlock
+Infinite loop
+Hardware lockup
+Driver waiting forever
+
+iv]Triple Fault
+
+	A Triple Fault is a CPU-level failure on x86 processors.
+	eg : Stack Overflow
+
+
+4.Time Complexity
+
+Measures algorithm efficiency, represented in Big O notation
+O(1) : Constant
+O(log n) :Logarithmic
+O(n): Linear
+O(n!): Factorial
+O(n²): Quadratic
+
+
+5.Locking Mechanisms
+Mutex
+Used to protect shared resources.
+Only one thread enters critical section.
+
+Spinlock
+Thread continuously checks lock until available.
+Faster for very short waiting time.
+Wastes CPU while waiting.
